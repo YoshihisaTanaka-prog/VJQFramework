@@ -87,10 +87,10 @@ const main = Object.freeze({
       } else {
         console.log("checked if clasp exists in your environment.\ninstalling clasp because clasp is not installed. open other window. please wait...");
         if(efs.doExec(`start cmd /c "echo installing clasp in this cli window. please wait... & echo If you finished installing and closed this window, please press enter in the previous cli window & cd . & npm install -g @google/clasp & vjq -init"`)){
-          settingInfo.updateMe({checkedIfExistClasp: true});
         }
         vjq.end();
       }
+      settingInfo.updateMe({checkedIfExistClasp: true});
     }
   },
   deploy(options = {normal: [], titles: []}, afterFunction=()=>{}, isInpute){
